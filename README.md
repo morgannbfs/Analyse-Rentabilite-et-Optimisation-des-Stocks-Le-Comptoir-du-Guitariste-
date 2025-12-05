@@ -1,4 +1,4 @@
-# __Le Comptoir du Guitariste — Analytise, Rentabilité & Optimisation des Stocks__
+# __Le Comptoir du Guitariste — Analyse, Rentabilité & Optimisation des Stocks__
 ## Tech Stack
 
 SQL (PostgreSQL) • Python • Pandas • NumPy • Matplotlib • Seaborn • Jupyter
