@@ -98,7 +98,6 @@ ORDER BY client_id ASC
 ```
 
 (Source : [1.segments_clients](1.Donnees\2.Requetes_SQL\2.analyse_client\1.segments_clients.sql) 
-[Requête de Segmentation Clients](1.Donnees/2.Requetes_SQL/2.analyse_client/1.segments_clients.sql))
 
 ## 4. Analyse (Python)
 Les analyses ont été finalisées en Python, après export SQL au format csv. Bien que ce ne soit pas le meilleur format dans la pratique de marché, ce choix simplifiait les transferts de données pour cette analyse.  
