@@ -120,25 +120,34 @@ import matplotlib.pyplot as plt
 
 Exemple de code Python utilisé:
 ```python 
-# CALCUL DE LA SOMME CUMULATIVE DE LA MARGE POUR L'ANALYSE DE PARETO:
+# --- Préparation du DataFrame pour le Calcul de la Contribution Cumulative ---
 
-df_pareto.sort_values(by='pct_marge_globale', ascending =False, inplace = True)
+# Nettoyage des colonnes : Suppression des indicateurs en valeur absolue (transactions, CA, volume)
+# et de la contribution CA (pct_ca_global) pour isoler la Marge Brute, l'indicateur d'intérêt pour Pareto.
+df_pareto = df_pareto.drop(columns=['total_transactions', 'ca_total', 'pct_ca_global', 'volume_total_vendu'])
 
-# Regroupement par catégorie : 
+# Tri du DataFrame par ordre décroissant de la Marge Brute (pct_marge_globale).
+# Cette étape est fondamentale pour le calcul correct de la contribution cumulative.
+df_pareto.sort_values(by='pct_marge_globale', ascending=False, inplace=True)
+
+# --- Agrégation au Niveau Catégorie ---
+
+# Agrégation des marges brutes par catégorie pour obtenir la marge totale par groupe.
 df_marge_categorie = df_pareto.groupby('categorie')['marge_brute'].sum().reset_index()
 
-# Total global : 
+# Calcul de la Marge Brute Totale (global) pour l'ensemble du catalogue.
 total_marge = df_pareto['marge_brute'].sum()
 
-# Pct marge globale par catégorie :
-df_marge_categorie['pct_marge_globale'] =  df_marge_categorie['marge_brute']/total_marge
-df_marge_categorie.set_index('categorie')
+# Calcul de la contribution en pourcentage de chaque catégorie à la Marge Globale.
+df_marge_categorie['pct_marge_globale'] = df_marge_categorie['marge_brute'] / total_marge
 
-df_marge_categorie = df_marge_categorie.sort_values(by = 'pct_marge_globale' , ascending = False)
+# Retri du DataFrame agrégé par ordre décroissant de la contribution (%) pour la visualisation.
+df_marge_categorie = df_marge_categorie.sort_values(by='pct_marge_globale', ascending=False)
 
-# Somme cumulative
-df_marge_categorie['cumul_marge_pct']= df_marge_categorie['pct_marge_globale'].cumsum().sort_values(ascending = False)
+# --- Calcul de la Somme Cumulative (Courbe de Pareto) ---
 
+# Calcul de la somme cumulative de la contribution en pourcentage de la marge globale.
+df_marge_categorie['cumul_marge_pct'] = df_marge_categorie['pct_marge_globale'].cumsum()
 ```
 (Source : [2.Produits](2.Notebooks/2.Produits.ipynb))  
 
