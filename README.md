@@ -1,4 +1,4 @@
-# __Le Comptoir du Guitariste — Analytics, Rentabilité & Optimisation des Stocks__
+# __Le Comptoir du Guitariste — Analytise, Rentabilité & Optimisation des Stocks__
 ## Tech Stack
 
 SQL (PostgreSQL) • Python • Pandas • NumPy • Matplotlib • Seaborn • Jupyter
@@ -23,9 +23,9 @@ SQL (PostgreSQL) • Python • Pandas • NumPy • Matplotlib • Seaborn • 
 * [6. Insights & Findings (principaux résultats)](#6-insights--findings-principaux-résultats)
 * [7. Recommandations Business](#7-recommandations-business)
 
-## 1. Contexte & Objectifs du Projet
+## 1. Contexte 
 Le Comptoir du Guitariste est une boutique e-commerce fictive spécialisée dans la vente de guitares et accessoires liés.
-Malgré un volume de ventes solide et une marge brute confortable, la rentabilité globale s'est détériorée.
+Malgré un volume de ventes solide et une marge brute confortable, la rentabilité globale s'est détériorée. L'objectif est d'identifier les leviers financiers et opérationnels (ventes, clients, stocks) responsables de cette dégradation sur la période 01/01/2022-31/12/2024.
 
 
 ## 2. Données Utilisées
@@ -97,7 +97,7 @@ ORDER BY client_id ASC
 ;
 ```
 
-(Source : [1.segments_clients](1.Donnees\2.Requetes_SQL\2.analyse_client\1.segments_clients.sql) )
+(Source : [1.segments_clients](1.Donnees/2.Requetes_SQL/2.analyse_client/1.segments_clients.sql) )
 
 ## 4. Analyse (Python)
 Les analyses ont été finalisées en Python, après export SQL au format csv. Bien que ce ne soit pas le meilleur format dans la pratique de marché, ce choix simplifiait les transferts de données pour cette analyse.  
@@ -140,13 +140,13 @@ df_marge_categorie = df_marge_categorie.sort_values(by = 'pct_marge_globale' , a
 df_marge_categorie['cumul_marge_pct']= df_marge_categorie['pct_marge_globale'].cumsum().sort_values(ascending = False)
 
 ```
-(Source : [2.Produits](2.Notebooks\2.Produits.ipynb))  
+(Source : [2.Produits](2.Notebooks/2.Produits.ipynb))  
 
 ## 5. Visualisations et Analyse
 
 ### __1. Performance Globale des Ventes__
 
-![Dashboard_1.jpg](1.Donnees\3.Graphiques\Dashboard_1.jpg)
+![Dashboard_1.jpg](1.Donnees/3.Graphiques/Dashboard_1.jpg)
 - Le Chiffre d'affaire et le volume augmentent respectivement de 12,1% et de 12,5% sur la période 2022-2024. 
 - Les ventes ont particulièrement été impactées par la baisse du chiffre d'affaires de 7,1% en Janvier 2024, malgré une augmentation du volume vendu de 2,8%. Les clients se sont tournés vers plus de produits, mais de plus faible valeur qu'en Janvier 2023 (cordes ou médiators).
 
@@ -155,12 +155,12 @@ df_marge_categorie['cumul_marge_pct']= df_marge_categorie['pct_marge_globale'].c
 - Les amplis et guitares, bien que représentant 2,6% du volume vendu, représentent 40,5% du chiffre d'affaire réalisé et 31,8% de la marge brute. Le prix unitaire plus élevé compense les volumes plus faibles de ventes.
 
 _Sources :_ 
-- _[Notebook 1](2.Notebooks\1.Vue_globale_3ans.ipynb)_
-- _[Notebook 2.a](2.Notebooks\2.Produits.ipynb)_
+- _[Notebook 1](2.Notebooks/1.Vue_globale_3ans.ipynb)_
+- _[Notebook 2.a](2.Notebooks/2.Produits.ipynb)_
 
 #### __a. Produits les plus performants__
 
-![TOP](1.Donnees\3.Graphiques\README\2.b.Top_categories_en_pct_du_CA.png)
+![TOP](1.Donnees/3.Graphiques/README/2.b.Top_categories_en_pct_du_CA.png)
 
 Les ventes sont soutenues par les accessoires, bien que le prix unitaire des instruments leur permette de générer 19,7% du chiffre d'affaires. 
 
@@ -172,28 +172,29 @@ plt.tight_layout()
 plt.show()
 
 ```
-_Source : [Notebook 2.b.](2.Notebooks\2.Produits.ipynb)_
+_Source : [Notebook 2.b.](2.Notebooks/2.Produits.ipynb)_
 
 #### __b. 10 meilleurs mois en Chiffre d'Affaires (2022-2024)__
-![T](1.Donnees\3.Graphiques\README\4.b.TOP_10_mois_CA.png)
+![T](1.Donnees/3.Graphiques/README/4.b.TOP_10_mois_CA.png)
 
 - Les 10 mois de vente les plus importants pour le Comptoir du Guitariste sont situés sur le quatrième trimestre sur les trois années consécutives. La rentrée scolaire de Septembre, le Black Friday en Novembre et les fêtes de fin d'année représentent une période de choix pour les achats liés aux loisirs.  
 
-_Source : [Notebook 4.b](2.Notebooks\4.Saisonnalité.ipynb)_
+_Source : [Notebook 4.b](2.Notebooks/4.Saisonnalité.ipynb)_
+
 #### __c. Loi de Pareto 80/20 : s'applique -t-elle ici ?__
-![](1.Donnees\3.Graphiques\README\2.e.analyse_marge_volume_Pareto.png)
+![](1.Donnees/3.Graphiques/README/2.e.analyse_marge_volume_Pareto.png)
 
 -  La loi de Pareto 80/20 ne s'applique pas : 71% des produits génèrent 84% de la marge brute. 
-La distribution de la marge est plus égalitaire que dans la loi de Pareto classique (80/20).
+La distribution de la marge est plus égalitaire, indiquant qu'une rupture sur un seul produit aura moins d'impact que dans la loi de Pareto classique (80/20) .
 - Cependant la marge brute est fortement corrélée à la performance des amplis et cordes, qui sont ses principaux contributeurs (environ 60% de la marge brute globale). 
 
 - La gestion des Amplis, Cordes Électriques, Cordes Folk (top 3 contributeurs à la marge) doit être la plus optimisée afin d'éviter tout impact disproportionné sur la rentabilité globale.
 
-_Source : [Notebook 2.e](2.Notebooks\2.Produits.ipynb)_
+_Source : [Notebook 2.e](2.Notebooks/2.Produits.ipynb)_
 
 ### __2.Clients__
 
-![a](1.Donnees\3.Graphiques\Dashboard_2.jpg) 
+![a](1.Donnees/3.Graphiques/Dashboard_2.jpg) 
 
 - 54,8% des clients ont réalisé au moins un achat et sont donc considérés comme actifs.
 Les clients les plus fidèles sont localisés dans le haut droit de la matrice (récence et fréquence d'achat élevées) et représentent 16,2% de la clientèle active. 
@@ -203,52 +204,53 @@ Les clients les plus fidèles sont localisés dans le haut droit de la matrice (
 - 45,2% des clients enregistrés n'ont pas effectué d'achat. Ils peuvent avoir créé un compte sur le site en ligne, enregistré un panier d'achat ou être abonné à la newsletter. 
 
 _Sources :_
-- _[Notebook 3.a](2.Notebooks\3.Clients.ipynb)_
-- _[Notebook 3.c](2.Notebooks\3.Clients.ipynb)_
+- _[Notebook 3.a](2.Notebooks/3.Clients.ipynb)_
+- _[Notebook 3.c](2.Notebooks/3.Clients.ipynb)_
 
 
 #### __a. Panier moyen par type de client__
 
-![c](1.Donnees\3.Graphiques\README\3.d.panier_moyen_par_catégorie.png)
+![c](1.Donnees/3.Graphiques/README/3.d.panier_moyen_par_catégorie.png)
 
 - Les produits les plus achetés par l'ensemble des clients sont les médiators et les cordes de guitare, qui doivent être renouvelé régulièrement et sont sont accessibles au plus grand nombre (<25€). Ce sont également les produits d'entrée pour les nouveaux clients.
 
 - Les clients à risque sont définis par un score RFM (Récence, Fréquence, Chiffre d'affaire généré) compris entre 222 et 332. Ce sont des clients qui achètent principalement des accessoires mais peu fréquemment et pas récemment. Ils peuvent être des amateurs qui ne consomment pas beaucoup de matériel, avoir arrêté la pratique de la guitare ou avoir choisi un autre fournisseur. Ils sont 16 807 à appartenir à cette catégorie
 
-_Source : [Notebook 3.d](2.Notebooks\3.Clients.ipynb)_
+_Source : [Notebook 3.d](2.Notebooks/3.Clients.ipynb)_
 #### __b. Distribution des ventes par plages horaires (semaine vs week-end)__
-![a](1.Donnees\3.Graphiques\README\4.d.CA_par_plage_horaire_semaine.png)
+![a](1.Donnees/3.Graphiques/README/4.d.CA_par_plage_horaire_semaine.png)
 
 - Les clients achètent sur leur temps libre et lorsqu'ils sont chez eux. Les moments les plus propices à l'achat sont donc le soir, suivi du week-end après-midi. Ce sont les plages horaires à privilégier pour lancer les promotions et campagnes publicitaires, mais également celles qui nécessitent le plus de ressources. 
 
-_Source : [Notebook 4.d](2.Notebooks\4.Saisonnalité.ipynb)_
+_Source : [Notebook 4.d](2.Notebooks/4.Saisonnalité.ipynb)_
 
 ### __3.Gestion des Stocks__
-![a](1.Donnees\3.Graphiques\Dashboard_3.jpg)
+![a](1.Donnees/3.Graphiques/Dashboard_3.jpg)
 
 - Il y a une cyclicité annuelle claire, avec des pics localisés sur le troisième trimestre, principalement en Décembre (corroboré avec l'analyse en 1.b. ([Voir ici](#b-10-meilleurs-mois-en-chiffre-daffaires-2022-2024))), et un léger creux en Août-Septembre, expliqué par le ralentissement global annuel lié aux vacances scolaires à cette période. 
 
 - Les stocks pourraient être optimisés, notamment pour les instruments, qui mobilisent beaucoup de capital (coût moyen d'acquisition de 500,0€ pour l'entreprise). A l'inverse, on observe du sous-stockage sur les accessoires les plus vendus.
 
 _Sources :_
-- _[Notebook 4.a](2.Notebooks\4.Saisonnalité.ipynb)_
-- _[Notebook 5.d](2.Notebooks\5.optimisation_stocks.ipynb)_
+- _[Notebook 4.a](2.Notebooks/4.Saisonnalité.ipynb)_
+- _[Notebook 5.d](2.Notebooks/5.optimisation_stocks.ipynb)_
 
 #### __a. Impact du sur-stock sur la marge__
 
-![a](1.Donnees\3.Graphiques\README\5.c.Impact_sur_stock_sur_marge.png)
+![a](1.Donnees/3.Graphiques/README/5.c.Impact_sur_stock_sur_marge.png)
 
 - Ce graphique nous permet d'avoir une meilleure vue des coûts engendrés par le sur-stockage. Les coûts de possessions sont définis par la formule suivante avec un taux de possession annuel fixé à 20% : 
 $$\text{Coût de Possession Annuel} = \text{Sur-stock} \, \times \, \text{Coût Unitaire} \, \times \, \text{Taux de Possession Annuel}$$
 
-_Source : [Notebook 5.c](2.Notebooks\5.optimisation_stocks.ipynb)_
+_Source : [Notebook 5.c](2.Notebooks/5.optimisation_stocks.ipynb)_
+
 #### __b. Durée d'autonomie du stock mensuel__
 
-![c](1.Donnees\3.Graphiques\README\5.b.Stock_cover.png)
+![c](1.Donnees/3.Graphiques/README/5.b.Stock_cover.png)
 
-- La mauvaise répartition des stocks engendre une asymétrie dans le besoin de réapprovisionnement et demande un suivi pour chaque catégorie, accaparant du personnel, du temps et de l'argent. On constate les ruptures de stocks inévitables sur les amplis et sangles qui n'ont que deux semaines d'autonomie alors que les guitares ont plus de trois années de ventes en réserve. 
+- La mauvaise répartition des stocks engendre une asymétrie dans le besoin de réapprovisionnement et demande un suivi pour chaque catégorie, accaparant du personnel, du temps et de l'argent. On constate les ruptures de stocks inévitables sur les amplis et sangles qui n'ont que deux semaines d'autonomie alors que les guitares affichent un _stock cover_ de 160 semaines (plus de trois ans), signalant un risque majeur de perte de valeur et d'immobilisation de capital. 
 
-_Source : [Notebook 5.b](2.Notebooks\5.optimisation_stocks.ipynb)_
+_Source : [Notebook 5.b](2.Notebooks/5.optimisation_stocks.ipynb)_
 
 ## 6. Insights & Findings (principaux résultats)
 ### 📌 1. Forte saisonnalité
@@ -321,8 +323,8 @@ Ces clients sont le moteurs de la croissance de l'entreprise et doivent donc êt
 
 #### Développer les plages horaires:
 
-Les moments les plus propices à la vente sont le soir et le week-end après-midi. Deux options sont possible.
-1. Amplifier les plages horaires clés pour maximiser le chiffre d'affaires et la satisfaction client. La rentabilité devrait augmenter rapidement, mais la demande plafonnera après un certain temps et les ressources seront utilisées de manière intensive sur ces plages horaires.
+Les moments les plus propices à la vente sont le soir et le week-end après-midi. Deux options sont possible pour les optimiser.
+1. Amplifier les plages horaires clés pour maximiser le chiffre d'affaires et la satisfaction client. La rentabilité devrait augmenter rapidement, mais la demande plafonnera après un certain temps et les ressources seront utilisées de manière intensive sur ces plages horaires. Cette option capitalise sur un succès prouvé et est la plus certaine. 
 
-2. Développer les plages horaires creuses pour lisser la demande et gagner de nouveaux clients. Cette stratégie optimise l'utilisation des ressources et permet des gains de parts de marché, mais requiert des coûts marketing pour un résultat incertain. 
+2. Développer les plages horaires creuses pour lisser la demande et gagner de nouveaux clients. Cette stratégie optimise l'utilisation des ressources et permet des gains de parts de marché, mais requiert des coûts marketing pour un résultat incertain. Cette option est intéressante à moyen terme pour lisser la charge et l'utilisation du capital.
 
