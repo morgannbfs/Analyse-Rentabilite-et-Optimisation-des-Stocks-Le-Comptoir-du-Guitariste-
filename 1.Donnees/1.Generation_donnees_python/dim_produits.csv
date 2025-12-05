@@ -1,0 +1,71 @@
+produit_id,categorie,reference_produit,prix_vente,cout,marge_unitaire,poids_categorie,poids_prix,poids_produit_final
+GUE01,Guitare Electrique,Fender Strat Std,580.0,348.0,232.0,1.0,1.0,1.0
+GUE02,Guitare Electrique,Epiphone Les Paul Std,550.0,330.0,220.0,1.0,1.0,1.0
+GUE03,Guitare Electrique,Ibanez RG421,410.0,246.0,164.0,1.0,1.0,1.0
+GUE04,Guitare Electrique,Squier Affinity Strat,280.0,168.0,112.0,1.0,2.0,2.0
+GUE05,Guitare Electrique,Gibson Les Paul Std,1390.0,834.0,556.0,1.0,0.5,0.5
+GUE06,Guitare Electrique,PRS SE Custom 24,850.0,510.0,340.0,1.0,0.5,0.5
+GUE07,Guitare Electrique,Yamaha Pacifica 112,250.0,150.0,100.0,1.0,2.0,2.0
+GUE08,Guitare Electrique,Gretsch Streamliner,650.0,390.0,260.0,1.0,1.0,1.0
+GUE09,Guitare Electrique,Duesenberg Starplayer TV,2599.0,1559.4,1039.6,1.0,0.5,0.5
+GUE10,Guitare Electrique,Jackson JS22 DKA,230.0,138.0,92.0,1.0,2.0,2.0
+GUF01,Guitare Folk,Martin D-18,3199.0,1919.4,1279.6,1.0,0.5,0.5
+GUF02,Guitare Folk,Taylor GS Mini,780.0,468.0,312.0,1.0,1.0,1.0
+GUF03,Guitare Folk,Yamaha FG800M,279.0,167.4,111.6,1.0,2.0,2.0
+GUF04,Guitare Folk,Takamine GD20,410.0,246.0,164.0,1.0,1.0,1.0
+GUF05,Guitare Folk,Fender CD-60,200.0,120.0,80.0,1.0,2.0,2.0
+GUF06,Guitare Folk,Ibanez PF15,270.0,162.0,108.0,1.0,2.0,2.0
+GUF07,Guitare Folk,Seagull S6 Original,689.0,413.4,275.6,1.0,1.0,1.0
+GUF08,Guitare Folk,Guild D-120,550.0,330.0,220.0,1.0,1.0,1.0
+GUF09,Guitare Folk,Epiphone Hummingbird,750.0,450.0,300.0,1.0,1.0,1.0
+GUF10,Guitare Folk,Gibson L-00,1750.0,1050.0,700.0,1.0,0.5,0.5
+SNG01,Sangle,Sangle cuir Deluxe,45.0,18.0,27.0,10.0,2.0,20.0
+SNG02,Sangle,Sangle Nylon Noir,12.0,4.8,7.2,10.0,3.0,30.0
+SNG03,Sangle,Sangle Jacquard Vintage,25.0,10.0,15.0,10.0,2.0,20.0
+SNG04,Sangle,Sangle en coton,18.0,7.2,10.8,10.0,3.0,30.0
+SNG05,Sangle,Sangle Cuir Suede,35.0,14.0,21.0,10.0,2.0,20.0
+SNG06,Sangle,Sangle Dunlop,15.0,6.0,9.0,10.0,3.0,30.0
+SNG07,Sangle,Sangle Ernie Ball,14.0,5.6,8.4,10.0,3.0,30.0
+SNG08,Sangle,Sangle Levys Tissus,22.0,8.8,13.2,10.0,2.0,20.0
+SNG09,Sangle,Sangle en chanvre,28.0,11.2,16.8,10.0,2.0,20.0
+SNG10,Sangle,Sangle Planet Waves,16.0,6.4,9.6,10.0,3.0,30.0
+MED01,Mediator,"Dunlop Primetone Standard Grip 0,73",12.5,5.0,7.5,10.0,3.0,30.0
+MED02,Mediator,Dunlop Electric Pick Variety Pack,7.5,3.0,4.5,10.0,3.0,30.0
+MED03,Mediator,"Dunlop Tortex Standard 0,88",6.9,2.76,4.14,10.0,3.0,30.0
+MED04,Mediator,Dunlop Nylon Max Grip 0.73 Player Pk,6.9,2.76,4.14,10.0,3.0,30.0
+MED05,Mediator,Fender Ocean Turq Pick Extra Heavy,5.5,2.2,3.3,10.0,3.0,30.0
+MED06,Mediator,Fender Triangle Picks Shell Set Med,7.5,3.0,4.5,10.0,3.0,30.0
+MED07,Mediator,Ibanez PPA16HSG-RD Pick Set,7.9,3.16,4.74,10.0,3.0,30.0
+MED08,Mediator,Gibson Perloid Picks Medium 12pc,4.9,1.96,2.94,10.0,3.0,30.0
+MED09,Mediator,Gibson Picks Wedge Style Heavy Set,19.9,7.96,11.94,10.0,3.0,30.0
+MED10,Mediator,Taylor Celluloid Pick Tin Set,16.9,6.76,10.14,10.0,3.0,30.0
+CDF01,Cordes Folk,Elixir Nanoweb Light Phosphor Bronze,16.9,6.76,10.14,10.0,3.0,30.0
+CDF02,Cordes Folk,DAddario EJ16 Light,8.7,3.48,5.22,10.0,3.0,30.0
+CDF03,Cordes Folk,Adamas 1717NU,15.7,6.28,9.42,10.0,3.0,30.0
+CDF04,Cordes Folk,Ernie Ball 2003 Earthwood Bronze,5.8,2.32,3.48,10.0,3.0,30.0
+CDF05,Cordes Folk,GHS Bright Bronze BB60X 009-042,13.4,5.36,8.04,10.0,3.0,30.0
+CDF06,Cordes Folk,Ernie Ball Paradigm Phosphor B. EL 10-50,16.6,6.64,9.96,10.0,3.0,30.0
+CDF07,Cordes Folk,Thomastik SB110 Spectrum Bronze,19.6,7.84,11.76,10.0,3.0,30.0
+CDF08,Cordes Folk,Savarez Argentine 1510,9.7,3.88,5.82,10.0,3.0,30.0
+CDF09,Cordes Folk,Martin Guitar MA-170 Authentic Acoustic Set,6.9,2.76,4.14,10.0,3.0,30.0
+CDF10,Cordes Folk,Daddario EJ16-3D,24.9,9.96,14.94,10.0,2.0,20.0
+AMP01,Ampli,Fender Blues Junior,769.0,461.4,307.6,3.0,1.0,3.0
+AMP02,Ampli,Boss Katana 50 (Gen 3),285.0,171.0,114.0,3.0,2.0,6.0
+AMP03,Ampli,Marshall MG30GFX,179.0,107.4,71.6,3.0,2.0,6.0
+AMP04,Ampli,Blackstar FLY3 Mini,70.0,42.0,28.0,3.0,2.0,6.0
+AMP05,Ampli,Vox AC30,1200.0,720.0,480.0,3.0,0.5,1.5
+AMP06,Ampli,Positive Grid Spark 40,218.0,130.8,87.2,3.0,2.0,6.0
+AMP07,Ampli,Line 6 Catalyst 60,269.0,161.4,107.6,3.0,2.0,6.0
+AMP08,Ampli,Orange Crush 20RT,225.0,135.0,90.0,3.0,2.0,6.0
+AMP09,Ampli,Roland Cube 10GX,179.0,107.4,71.6,3.0,2.0,6.0
+AMP10,Ampli,Peavey Vypyr X1,229.0,137.4,91.6,3.0,2.0,6.0
+CDE01,Cordes Electrique,Ernie Ball 2221 Regular Slinky,5.9,2.36,3.54,10.0,3.0,30.0
+CDE02,Cordes Electrique,DAddario EXL110 Regular Light,6.9,2.76,4.14,10.0,3.0,30.0
+CDE03,Cordes Electrique,Elixir Nanoweb Light (Single),13.9,5.56,8.34,10.0,3.0,30.0
+CDE04,Cordes Electrique,Ernie Ball Super Slinky 2223,5.7,2.28,3.42,10.0,3.0,30.0
+CDE05,Cordes Electrique,DAddario NYXL0946 Hybrid Light,13.9,5.56,8.34,10.0,3.0,30.0
+CDE06,Cordes Electrique,Ernie Ball 3221 (3-Pack),16.9,6.76,10.14,10.0,3.0,30.0
+CDE07,Cordes Electrique,Fender 250L (3-Pack),13.9,5.56,8.34,10.0,3.0,30.0
+CDE08,Cordes Electrique,Ernie Ball Power Slinky 2220,5.9,2.36,3.54,10.0,3.0,30.0
+CDE09,Cordes Electrique,Pyramid Pure Nickel (Jazz),6.4,2.56,3.84,10.0,3.0,30.0
+CDE10,Cordes Electrique,DAddario EXL125 Super Light,7.9,3.16,4.74,10.0,3.0,30.0
