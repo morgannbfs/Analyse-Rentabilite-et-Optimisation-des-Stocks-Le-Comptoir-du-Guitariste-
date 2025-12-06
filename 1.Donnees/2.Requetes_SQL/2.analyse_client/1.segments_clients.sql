@@ -89,5 +89,77 @@ WITH achat_client AS(
 ;
 
 
+------------------------------------------------------------
+------- 3. Palliers des quartiles de fréquence
+------------------------------------------------------------
 
+WITH
+RFM AS (
+    SELECT
+        dc.client_id,
+        MAX(fv.date_transaction) AS derniere_transaction,
+        COUNT(fv.date_transaction) AS nombre_transactions
+    FROM dim_clients dc
+    LEFT JOIN fact_ventes fv ON fv.client_id = dc.client_id
+    GROUP BY dc.client_id
+),
+SCORES AS (
+    SELECT
+        client_id,
+        nombre_transactions,
+        -- Calcul du score de Fréquence (uniquement pour les clients actifs)
+        NTILE(4) OVER(ORDER BY nombre_transactions ASC) AS score_frequency
+    FROM RFM
+    WHERE nombre_transactions > 0
+)
+
+-- Agrégation finale pour trouver les seuils (paliers)
+SELECT
+    score_frequency,
+    -- Le nombre minimum de transactions pour ce score (limite inférieure du palier)
+    MIN(nombre_transactions) AS min_transactions,
+    -- Le nombre maximum de transactions pour ce score (limite supérieure du palier)
+    MAX(nombre_transactions) AS max_transactions,
+    -- Le nombre de clients dans ce palier (pour vérifier que les groupes sont de taille égale)
+    COUNT(client_id) AS nombre_clients_dans_palier
+FROM SCORES
+GROUP BY score_frequency
+ORDER BY score_frequency ASC;
+
+------------------------------------------------------------
+------- 4. PAlliers des quartiles de récence
+------------------------------------------------------------
+
+WITH
+RFM AS (
+    SELECT
+        dc.client_id,
+        MAX(fv.date_transaction) AS derniere_transaction,
+        COUNT(fv.date_transaction) AS nombre_transactions
+    FROM dim_clients dc
+    LEFT JOIN fact_ventes fv ON fv.client_id = dc.client_id
+    GROUP BY dc.client_id
+),
+SCORES AS (
+    SELECT
+        client_id,
+        derniere_transaction,
+        -- Calcul du score de Récence (uniquement pour les clients actifs)
+        -- Tri par date ASC pour que le score 4 aille aux transactions les plus récentes
+        NTILE(4) OVER(ORDER BY derniere_transaction ASC) AS score_recency
+    FROM RFM
+    WHERE nombre_transactions > 0 AND derniere_transaction IS NOT NULL
+)
+
+-- Agrégation finale pour trouver les seuils (paliers)
+SELECT
+    score_recency,
+    -- La date la plus ancienne (MIN) pour ce score (limite inférieure du palier)
+    MIN(derniere_transaction) AS plus_ancienne_transaction,
+    -- La date la plus récente (MAX) pour ce score (limite supérieure du palier)
+    MAX(derniere_transaction) AS plus_recente_transaction,
+    COUNT(client_id) AS nombre_clients_dans_palier
+FROM SCORES
+GROUP BY score_recency
+ORDER BY score_recency ASC;
 
