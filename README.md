@@ -208,7 +208,7 @@ _Source : [Notebook 2.e](2.Notebooks/2.Produits.ipynb)_
 - 54,8% des clients ont réalisé au moins un achat et sont donc considérés comme actifs.
 Les clients les plus fidèles sont localisés dans le haut droit de la matrice (récence et fréquence d'achat élevées) et représentent 16,2% de la clientèle active. 
 
-- 25% des clients actifs sont des acheteurs peu fréquents (ayant acheté entre 1 et 2 fois entre 2022 et 2024) et un tiers d'entre eux ont effectué leur achat sur la première année d'étude . Cela peut être lié à des clients insatisfaits du service ou des acheteurs de produits onéreux et durables.
+- 25% des clients actifs sont des acheteurs peu fréquents (ayant acheté entre 1 et 2 fois entre 2022 et 2024) et un tiers d'entre eux ont effectué leur achat sur 2022. Cela peut être lié à des clients insatisfaits du service ou des acheteurs de produits onéreux et durables.
 Le double score récence/ fréquence de 1/1 indique que ces clients sont probablement perdus. 
 
 - 45,2% des clients enregistrés n'ont pas effectué d'achat. Ils peuvent avoir créé un compte sur le site en ligne, enregistré un panier d'achat ou être abonné à la newsletter. 
