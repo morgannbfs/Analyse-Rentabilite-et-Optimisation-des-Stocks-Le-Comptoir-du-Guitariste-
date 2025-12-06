@@ -313,16 +313,13 @@ Définir un stock de sécurité par catégorie permettrait de garantir une dispo
 
 Mesure le nombre de semaines pendant lesquels le stock actuel peut couvrir la demande moyenne future sans réapprovisionnement. Il faudrait définir un nombre de jour minimum de couverture (en lien avec le stock de sécurité). 
 
-![](1.Donnees/3.Graphiques/README/taux_couverture_formule.png)
-
+$$\text{Taux de Couverture (en semaines)} = \frac{\text{Stock Actuel}}{\text{Ventes Moyennes Hebdomadaires}}$$ 
 
 
 - Taux de Rotation : 
 
 Mesure le nombre de fois où le stock moyen a été vendu et remplacé pendant une période donnée.
 Si ce taux est faible pour les guitares, cela confirme que le capital y est immobilisé trop longtemps.
-
-![](1.Donnees/3.Graphiques/README/taux_rotation_formule.png)
 
 $$\text{Taux de Rotation} = \frac{\text{Coût des Marchandises Vendues (CMV)}}{\text{Valeur du Stock Moyen}}$$
 
