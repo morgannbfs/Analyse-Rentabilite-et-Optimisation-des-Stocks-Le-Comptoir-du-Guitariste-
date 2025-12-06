@@ -197,7 +197,7 @@ _Source : [Notebook 4.b](2.Notebooks/4.Saisonnalité.ipynb)_
 La distribution de la marge est plus égalitaire, indiquant qu'une rupture de stock sur un seul produit aura moins d'impact que dans la loi de Pareto classique (80/20) .
 - Cependant la marge brute est fortement corrélée à la performance des amplis et cordes, qui sont ses principaux contributeurs (environ 60% de la marge brute globale). 
 
-- La gestion des
+- La gestion des amplis, cordes électriques, cordes folk (top 3 contributeurs à la marge) doit être la plus optimisée afin d'éviter tout impact disproportionné sur la rentabilité globale.
 
 _Source : [Notebook 2.e](2.Notebooks/2.Produits.ipynb)_
 
