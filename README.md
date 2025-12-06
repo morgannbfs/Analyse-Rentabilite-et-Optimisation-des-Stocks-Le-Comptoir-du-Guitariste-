@@ -299,6 +299,15 @@ Les sangles et les amplis, sont en sous-stock important et nécessitent un réaj
 
 Dans un second temps, les médiators et cordes nécessiteront également une augmentation de leurs stocks.
 
+Pour un cycle de réapprovisionnement de 4 semaines pour l'ensemble des catégories, le stock ideal à atteindre est de 8500 unités réparties entre les différentes catégories selon leur poids dans les volumes vendus : 
+- Amplis : 150 unités
+- Cordes électriques : 2 179 unités
+- Cordes folk : 2 114 unités
+- Guitares électriques : 33
+- Guitare folk : 35
+- Médiator : 2 185
+- Sangle :1 807
+
 #### Mettre en place un système prédictif simple
 - Prévisions de demande :
 
