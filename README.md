@@ -157,11 +157,11 @@ df_marge_categorie['cumul_marge_pct'] = df_marge_categorie['pct_marge_globale'].
 
 ![Dashboard_1.jpg](1.Donnees/3.Graphiques/Dashboard_1.jpg)
 - Le Chiffre d'affaire et le volume augmentent respectivement de 12,1% et de 12,5% sur la période 2022-2024. 
-- Les ventes ont particulièrement été impactées par la baisse du chiffre d'affaires de 7,1% en Janvier 2024, malgré une augmentation du volume vendu de 2,8%. Les clients se sont tournés vers plus de produits, mais de plus faible valeur qu'en Janvier 2023 (cordes ou médiators).
+- Les ventes ont particulièrement été impactées par la baisse du chiffre d'affaires de 7,1% en Janvier 2024, malgré une augmentation du volume vendu de 2,8%. Les clients ont acheté plus dans des catégories moins onéreuses (cordes ou médiators) qu'en Janvier 2023. 
 
-- En Avril 2024, les ventes ont bondi de 23,65% vs Avril 2023 malgré un volume en légère baisse (-0,9%), indiquant une préférence pour des produits plus chers mais en plus petite quantité (instruments ou amplis) par rapport à l'année précédente.
+- En Avril 2024, les ventes ont bondi de 23,65% vs. Avril 2023 malgré un volume en légère baisse (-0,9%), indiquant une préférence pour des produits plus onéreux mais en plus petite quantité (instruments ou amplis) par rapport à l'année précédente.
 
-- Les amplis et guitares, bien que représentant 2,6% du volume vendu, représentent 40,5% du chiffre d'affaire réalisé et 31,8% de la marge brute. Le prix unitaire plus élevé compense les volumes plus faibles de ventes.
+- Les amplis et guitares, bien que représentant 2,6% du volume vendu, comptent pour 40,5% du chiffre d'affaire réalisé et 31,8% de la marge brute. Le prix unitaire plus élevé compense les volumes plus faibles de ventes.
 
 _Sources :_ 
 - _[Notebook 1](2.Notebooks/1.Vue_globale_3ans.ipynb)_
@@ -194,10 +194,10 @@ _Source : [Notebook 4.b](2.Notebooks/4.Saisonnalité.ipynb)_
 ![](1.Donnees/3.Graphiques/README/2.e.analyse_marge_volume_Pareto.png)
 
 -  La loi de Pareto 80/20 ne s'applique pas : 71% des produits génèrent 84% de la marge brute. 
-La distribution de la marge est plus égalitaire, indiquant qu'une rupture sur un seul produit aura moins d'impact que dans la loi de Pareto classique (80/20) .
+La distribution de la marge est plus égalitaire, indiquant qu'une rupture de stock sur un seul produit aura moins d'impact que dans la loi de Pareto classique (80/20) .
 - Cependant la marge brute est fortement corrélée à la performance des amplis et cordes, qui sont ses principaux contributeurs (environ 60% de la marge brute globale). 
 
-- La gestion des Amplis, Cordes Électriques, Cordes Folk (top 3 contributeurs à la marge) doit être la plus optimisée afin d'éviter tout impact disproportionné sur la rentabilité globale.
+- La gestion des
 
 _Source : [Notebook 2.e](2.Notebooks/2.Produits.ipynb)_
 
@@ -208,7 +208,8 @@ _Source : [Notebook 2.e](2.Notebooks/2.Produits.ipynb)_
 - 54,8% des clients ont réalisé au moins un achat et sont donc considérés comme actifs.
 Les clients les plus fidèles sont localisés dans le haut droit de la matrice (récence et fréquence d'achat élevées) et représentent 16,2% de la clientèle active. 
 
-- 13,7% des clients actifs sont des acheteurs peu fréquents et un tiers d'entre eux ont effectué leur achat il y a longtemps. Cela peut être lié à des clients insatisfaits du service ou des acheteurs de produits onéreux et durables. Le double score récence/ fréquence de 1/1 indique que ces clients sont probablement perdus. 
+- 25% des clients actifs sont des acheteurs peu fréquents (ayant acheté entre 1 et 2 fois entre 2022 et 2024) et un tiers d'entre eux ont effectué leur achat sur la première année d'étude . Cela peut être lié à des clients insatisfaits du service ou des acheteurs de produits onéreux et durables.
+Le double score récence/ fréquence de 1/1 indique que ces clients sont probablement perdus. 
 
 - 45,2% des clients enregistrés n'ont pas effectué d'achat. Ils peuvent avoir créé un compte sur le site en ligne, enregistré un panier d'achat ou être abonné à la newsletter. 
 
@@ -221,22 +222,22 @@ _Sources :_
 
 ![c](1.Donnees/3.Graphiques/README/3.d.panier_moyen_par_catégorie.png)
 
-- Les produits les plus achetés par l'ensemble des clients sont les médiators et les cordes de guitare, qui doivent être renouvelé régulièrement et sont sont accessibles au plus grand nombre (<25€). Ce sont également les produits d'entrée pour les nouveaux clients.
+- Les produits les plus achetés par l'ensemble des clients sont les médiators et les cordes de guitare, qui doivent être renouvelés régulièrement et sont accessibles au plus grand nombre (<25€). Ce sont également les produits d'entrée pour les nouveaux clients.
 
-- Les clients à risque sont définis par un score RFM (Récence, Fréquence, Chiffre d'affaire généré) compris entre 222 et 332. Ce sont des clients qui achètent principalement des accessoires mais peu fréquemment et pas récemment. Ils peuvent être des amateurs qui ne consomment pas beaucoup de matériel, avoir arrêté la pratique de la guitare ou avoir choisi un autre fournisseur. Ils sont 16 807 à appartenir à cette catégorie
+- Les clients à risque sont définis par un score RFM (Récence, Fréquence, Chiffre d'affaire généré) compris entre 222 et 332. Ce sont des clients qui achètent principalement des accessoires, peu fréquemment et pas récemment. Ils peuvent être des amateurs qui ne consomment pas beaucoup de matériel, avoir arrêté la pratique de la guitare ou avoir choisi un autre fournisseur. Ils sont 16 807 à appartenir à cette catégorie.
 
 _Source : [Notebook 3.d](2.Notebooks/3.Clients.ipynb)_
 #### __b. Distribution des ventes par plages horaires (semaine vs week-end)__
 ![a](1.Donnees/3.Graphiques/README/4.d.CA_par_plage_horaire_semaine.png)
 
-- Les clients achètent sur leur temps libre et lorsqu'ils sont chez eux. Les moments les plus propices à l'achat sont donc le soir, suivi du week-end après-midi. Ce sont les plages horaires à privilégier pour lancer les promotions et campagnes publicitaires, mais également celles qui nécessitent le plus de ressources. 
+- Les clients achètent sur leur temps libre et lorsqu'ils sont chez eux. Les moments les plus propices à l'achat sont donc le soir, suivi du week-end après-midi. Ce sont les plages horaires à privilégier pour lancer les promotions et campagnes publicitaires, mais également les moments qui nécessitent le plus de ressources. 
 
 _Source : [Notebook 4.d](2.Notebooks/4.Saisonnalité.ipynb)_
 
 ### __3.Gestion des Stocks__
 ![a](1.Donnees/3.Graphiques/Dashboard_3.jpg)
 
-- Il y a une cyclicité annuelle claire, avec des pics localisés sur le troisième trimestre, principalement en Décembre (corroboré avec l'analyse en 1.b. ([Voir ici](#b-10-meilleurs-mois-en-chiffre-daffaires-2022-2024))), et un léger creux en Août-Septembre, expliqué par le ralentissement global annuel lié aux vacances scolaires à cette période. 
+- Il y a une cyclicité annuelle claire, avec des pics localisés sur le quatrième trimestre, principalement en Décembre (corroboré avec l'analyse en 1.b. ([Voir ici](#b-10-meilleurs-mois-en-chiffre-daffaires-2022-2024))), et un léger creux en Août-Septembre, expliqué par le ralentissement global annuel lié aux congés à cette période. 
 
 - Les stocks pourraient être optimisés, notamment pour les instruments, qui mobilisent beaucoup de capital (coût moyen d'acquisition de 500,0€ pour l'entreprise). A l'inverse, on observe du sous-stockage sur les accessoires les plus vendus.
 
@@ -266,7 +267,7 @@ _Source : [Notebook 5.b](2.Notebooks/5.optimisation_stocks.ipynb)_
 Chaque année le mois de Décembre performe au-dessus de la moyenne annuelle (+120%).C’est le vrai moteur du chiffre d'affaires annuel et une période clé pour la pérennité de l'entreprise.
 
 ### 📌 2. Distribution de la marge équilibrée
-L'activité repose sur les ventes de 51 produits sur 70. Cette distribution large de la marge impose de s'assurer de stocks en conséquences sur ces 51 produits (amplis, cordes et guitares). 
+L'activité repose sur les ventes de 51 produits sur 70. Cette distribution large de la marge impose de s'assurer de stocks adéquats sur ces 51 produits (amplis, cordes et guitares). 
 
 Les 29% de produits les moins performants (sangles et médiators) jouent le rôle de produit d'entrée pour les nouveaux clients et assurent des volumes de ventes constants. 
 
@@ -274,15 +275,15 @@ Les 29% de produits les moins performants (sangles et médiators) jouent le rôl
 Les produits les plus vendus sont également ceux qui souffrent le plus de ruptures de stocks (amplis, sangles, médiators et cordes).
 
 ### 📌 4. Sur-stock sur certains modèles haut de gamme
-A l'inverse, les guitares, qui sont les produits les moins vendus, possèdent un stock excessif, qui impacte négativement le cash-flow en immobilisant de la trésorerie et en générant des coûts de possession.
+A l'inverse, les guitares, qui sont les produits les moins vendus, possèdent un stock excessif, qui impacte négativement le cash-flow en immobilisant de la trésorerie et en générant des coûts de possession élevés.
 
 ### 📌 5. Clients fidèles, moteur de l'activité
-Les clients fidèles constituent une base solide et conséquente pour l'activité de l'entreprise, générant 72,2% du chiffre d'affaires et de la marge brute. Ces clients commandent à 98,1% des accessoires.
+Les clients fidèles constituent une base solide et conséquente pour l'activité de l'entreprise, générant 72,2% du chiffre d'affaires et de la marge brute. 98,1%  des commandes de ces clientsdes sont des accessoires.
 
 On notera également un taux de rétention des nouveaux clients très performant de 87,59%.
 
 
-## 7. Recommandations Business
+## 7. Recommandations
 
 ### 1. Gestion des stocks :
 #### Optimiser l’assortiment
@@ -299,16 +300,16 @@ Dans un second temps, les médiators et cordes nécessiteront également une aug
 #### Mettre en place un système prédictif simple
 - Prévisions de demande :
 
-Les cycles annuels révèlent une forte augmentation des ventes sur le quatrième trimestre. Il faudra anticiper de possibles rupture chez les fournisseurs à cette période et prévoir en amont une augmentation des stocks pour compenser. 
+Les cycles annuels révèlent une forte augmentation des ventes sur le quatrième trimestre. Il faudra anticiper de possibles ruptures chez les fournisseurs à cette période et prévoir en amont une augmentation des stocks pour compenser. 
 
 - Stock de sécurité : 
 
-Définir un stock de sécurité par catégorie permettrait de garantir une disponibilité continue le temps de la réception des commandes.   
+Définir un stock de sécurité par catégorie permettrait de garantir une disponibilité permanente.   
 
 #### Définir des KPI récurrents pour piloter le stock :
 - Stock coverage : 
 
-Mesure le nombre de semaines pendant lesquels le stock actuel peut couvrir la demande moyenne future sans réapprovisionnement. Il faudrait définir un nombre de jour minimum de couverture. 
+Mesure le nombre de semaines pendant lesquels le stock actuel peut couvrir la demande moyenne future sans réapprovisionnement. Il faudrait définir un nombre de jour minimum de couverture (en lien avec le stock de sécurité). 
 $$
 \text{Taux de Couverture (en semaines)} = \frac{\text{Stock Actuel}}{\text{Ventes Moyennes Hebdomadaires}}
 $$
