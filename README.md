@@ -252,7 +252,7 @@ _Sources :_
 - Ce graphique nous permet d'avoir une meilleure vue des coûts engendrés par le sur-stockage. Les coûts de possessions sont définis par la formule suivante avec un taux de possession annuel fixé à 20% : 
 $$\text{Coût de Possession Annuel} = \text{Sur-stock} \, \times \, \text{Coût Unitaire} \, \times \, \text{Taux de Possession Annuel}$$
 
-![](1.Donnees\3.Graphiques\README\cout_possession_formule.png)
+![](1.Donnees/3.Graphiques/README/cout_possession_formule.png)
 
 _Source : [Notebook 5.c](2.Notebooks/5.optimisation_stocks.ipynb)_
 
@@ -313,7 +313,7 @@ Définir un stock de sécurité par catégorie permettrait de garantir une dispo
 
 Mesure le nombre de semaines pendant lesquels le stock actuel peut couvrir la demande moyenne future sans réapprovisionnement. Il faudrait définir un nombre de jour minimum de couverture (en lien avec le stock de sécurité). 
 
-![](1.Donnees\3.Graphiques\README\taux_couverture_formule.png)
+![](1.Donnees/3.Graphiques/README/taux_couverture_formule.png)
 
 
 - Taux de Rotation : 
@@ -321,7 +321,7 @@ Mesure le nombre de semaines pendant lesquels le stock actuel peut couvrir la de
 Mesure le nombre de fois où le stock moyen a été vendu et remplacé pendant une période donnée.
 Si ce taux est faible pour les guitares, cela confirme que le capital y est immobilisé trop longtemps.
 
-![](1.Donnees\3.Graphiques\README\taux_rotation_formule.png)
+![](1.Donnees/3.Graphiques/README/taux_rotation_formule.png)
 ### 2. Améliorer la stratégie clients
 #### Relancer le segment clients à risque :
 
