@@ -285,7 +285,7 @@ Les clients fidèles constituent une base solide et conséquente pour l'activit�
 On notera également un taux de rétention des nouveaux clients très performant de 87,59%.
 
 
-## 7. Recommandations
+## 7. Recommandations 
 
 ### 1. Gestion des stocks :
 #### Optimiser l’assortiment
@@ -308,7 +308,7 @@ Les cycles annuels révèlent une forte augmentation des ventes sur le quatrièm
 
 Définir un stock de sécurité par catégorie permettrait de garantir une disponibilité permanente.   
 
-#### Définir des KPI récurrents pour piloter le stock :
+#### Définir des KPI récurrents :
 - Stock coverage : 
 
 Mesure le nombre de semaines pendant lesquels le stock actuel peut couvrir la demande moyenne future sans réapprovisionnement. Il faudrait définir un nombre de jour minimum de couverture (en lien avec le stock de sécurité). 
