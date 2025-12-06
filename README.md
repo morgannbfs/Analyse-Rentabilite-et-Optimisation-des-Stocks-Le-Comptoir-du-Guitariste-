@@ -250,9 +250,9 @@ _Sources :_
 ![a](1.Donnees/3.Graphiques/README/5.c.Impact_sur_stock_sur_marge.png)
 
 - Ce graphique nous permet d'avoir une meilleure vue des coûts engendrés par le sur-stockage. Les coûts de possessions sont définis par la formule suivante avec un taux de possession annuel fixé à 20% : 
-$$\text{Coût de Possession Annuel} = \text{Sur-stock} \, \times \, \text{Coût Unitaire} \, \times \, \text{Taux de Possession Annuel}$$
 
- $$\text{Coût de Possession Annuel} = \text{Sur-stock} \, \times \, \text{Coût Unitaire} \, \times \, \text{Taux de Possession Annuel}$$ 
+$$\text{Coût de Possession Annuel} = \text{Sur-stock} \times \text{Coût Unitaire} \times \text{Taux de Possession Annuel}$$
+
 
 _Source : [Notebook 5.c](2.Notebooks/5.optimisation_stocks.ipynb)_
 
