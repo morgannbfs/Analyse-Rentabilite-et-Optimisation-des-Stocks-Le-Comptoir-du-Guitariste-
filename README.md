@@ -316,12 +316,16 @@ Mesure le nombre de semaines pendant lesquels le stock actuel peut couvrir la de
 ![](1.Donnees/3.Graphiques/README/taux_couverture_formule.png)
 
 
+
 - Taux de Rotation : 
 
 Mesure le nombre de fois où le stock moyen a été vendu et remplacé pendant une période donnée.
 Si ce taux est faible pour les guitares, cela confirme que le capital y est immobilisé trop longtemps.
 
 ![](1.Donnees/3.Graphiques/README/taux_rotation_formule.png)
+
+$$\text{Taux de Rotation} = \frac{\text{Coût des Marchandises Vendues (CMV)}}{\text{Valeur du Stock Moyen}}$$
+
 ### 2. Améliorer la stratégie clients
 #### Relancer le segment clients à risque :
 
