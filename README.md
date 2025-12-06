@@ -224,7 +224,7 @@ _Sources :_
 
 - Les produits les plus achetés par l'ensemble des clients sont les médiators et les cordes de guitare, qui doivent être renouvelés régulièrement et sont accessibles au plus grand nombre (<25€). Ce sont également les produits d'entrée pour les nouveaux clients.
 
-- Les clients à risque sont définis par un score RFM (Récence, Fréquence, Chiffre d'affaire généré) compris entre 222 et 332. Ce sont des clients qui achètent principalement des accessoires, peu fréquemment et pas récemment. Ils peuvent être des amateurs qui ne consomment pas beaucoup de matériel, avoir arrêté la pratique de la guitare ou avoir choisi un autre fournisseur. Ils sont 16 807 à appartenir à cette catégorie.
+- Les clients à risque sont définis par un score RFM (Récence, Fréquence, Chiffre d'affaire généré) compris entre 222 et 332. Ce sont des clients qui ont acheté principalement des accessoires, de 2 à 6 fois entre de Janvier 2023 à Août 2024. Ils peuvent être des amateurs qui ne consomment pas beaucoup de matériel, avoir arrêté la pratique de la guitare ou avoir choisi un autre fournisseur. Ils sont 16 807 à appartenir à cette catégorie.
 
 _Source : [Notebook 3.d](2.Notebooks/3.Clients.ipynb)_
 #### __b. Distribution des ventes par plages horaires (semaine vs week-end)__
