@@ -21,7 +21,7 @@ SQL (PostgreSQL) • Python • Pandas • NumPy • Matplotlib • Seaborn • 
         * [a. Impact du sur-stock sur la marge](#a-impact-du-sur-stock-sur-la-marge)
         * [b. Durée d'autonomie du stock mensuel](#b-durée-dautonomie-du-stock-mensuel)
 * [6. Insights & Findings (principaux résultats)](#6-insights--findings-principaux-résultats)
-* [7. Recommandations Business](#7-recommandations-business)
+* [7. Recommandations](#7-recommandations)
 
 ## 1. Contexte 
 Le Comptoir du Guitariste est une boutique e-commerce fictive spécialisée dans la vente de guitares et accessoires liés.
