@@ -253,6 +253,7 @@ _Sources :_
 
 $$\text{Coût de Possession Annuel} = \text{Sur-stock} \times \text{Coût Unitaire} \times \text{Taux de Possession Annuel}$$
 
+Les coûts de possession annuels s'élèvent à 190,3k€, dont 172,3k€ pour les sur-stocks.
 
 _Source : [Notebook 5.c](2.Notebooks/5.optimisation_stocks.ipynb)_
 
@@ -299,14 +300,18 @@ Les sangles et les amplis, sont en sous-stock important et nécessitent un réaj
 
 Dans un second temps, les médiators et cordes nécessiteront également une augmentation de leurs stocks.
 
-Pour un cycle de réapprovisionnement de 4 semaines pour l'ensemble des catégories, le stock ideal à atteindre est de 8500 unités réparties entre les différentes catégories selon leur poids dans les volumes vendus : 
+
+Le stock idéal est de 8 500 unités réparties proportionnellement aux volumes vendus pour un total de 90,3k€ (vs 951,7k€ pour le stock actuel).
+Pour un cycle de réapprovisionnement de 4 semaines pour l'ensemble des catégories, les stocks recommandés sont :  
 - Amplis : 150 unités
 - Cordes électriques : 2 179 unités
 - Cordes folk : 2 114 unités
 - Guitares électriques : 33
 - Guitare folk : 35
 - Médiator : 2 185
-- Sangle :1 807
+- Sangle : 1 807
+Ces volumes permetteront d'économiser 172,3k€ de coûts de possession annuels, qui s'éléveront à 18,1k€. 
+
 
 #### Mettre en place un système prédictif simple
 - Prévisions de demande :
